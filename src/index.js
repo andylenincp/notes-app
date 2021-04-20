@@ -14,7 +14,7 @@ app.set('port', process.env.PORT || 3000);
 app.set('title', 'Sistema de gestión de anotaciones para usuarios');
 app.set('views', path.join(__dirname, 'views'));
 app.engine('.hbs', exphbs({
-    defaultLayout: main,
+    defaultLayout: 'main',
     layoutsDir: path.join(app.get('views'), 'layouts'),
     partialsDir: path.join(app.get('views'), 'partials'),
     extname: '.hbs'
@@ -33,6 +33,9 @@ app.use(session({
 // Global variables
 
 // Routes
+app.use(require('./routes/index'));
+app.use(require('./routes/users'));
+app.use(require('./routes/notes'));
 
 // Static files
 
