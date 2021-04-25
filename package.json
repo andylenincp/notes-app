@@ -4,7 +4,6 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "npm build package.json",
     "dev": "nodemon src/index.js"
   },
   "author": "Andy Castillo",
